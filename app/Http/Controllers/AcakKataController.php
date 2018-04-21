@@ -10,53 +10,48 @@ class AcakKataController extends Controller
 {
     public function index() {
         $kata = $this->selectKata(0);
-
+    
         if($kata['id'] == 'data tidak ada'){
             $this->updateKata();
         }
-
-	   return view ('AcakKata/index', $kata);
-    }
+        return view ('AcakKata/index', $kata);
+        }
 
 	public function getJawaban(Request $request) {
-      $input = $request->input();
-
-      $result = DB::table('soal')
+        $input = $request->input();
+        $result = DB::table('soal')
                 ->select('kata_acak')
                 ->where('id', $input['id'])
                 ->get();
 
-      $result = json_decode(json_encode($result),true);
+        $result = json_decode(json_encode($result),true);
 
 
-      if($result[0]['kata_acak'] == $input['jawaban']){
+        if($result[0]['kata_acak'] == $input['jawaban']){
         $jawabannyaadalah['jawaban'] = 'benar';
-
-        DB::table('soal')
-        ->where('id', $input['id'])
-        ->update(['status' => 1]);
-
+                    DB::table('soal')
+                    ->where('id', $input['id'])
+                    ->update(['status' => 1]);
         $kata = $this->selectKata(0);
 
         if($kata['id'] == 'data tidak ada'){
             $this->updateKata();
         }
-
         $jawabannyaadalah['result'] = $kata;
-    }
-      else{
+        }
+        else{
         $jawabannyaadalah['jawaban'] = 'salah';
-    }
+        }
 
-      return $jawabannyaadalah;
+        return $jawabannyaadalah;
     }
 
     public function selectKata($status){
-        $kata = DB::table('soal')
-                    ->select('*')
-                    ->where('status', $status)
-                    ->inRandomOrder()
-                    ->first();
+            $kata = DB::table('soal')
+                        ->select('*')
+                        ->where('status', $status)
+                        ->inRandomOrder()
+                        ->first();
 
         $kata = json_decode(json_encode($kata),true);
 
@@ -68,7 +63,7 @@ class AcakKataController extends Controller
             $kata['klue'] = 'data tidak ada';
         }
 
-      return $kata;
+        return $kata;
     }
 
     private function updateKata(){
