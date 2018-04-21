@@ -5,7 +5,7 @@ Permainan Acak Kata
 composer install
 
 ## Database
-database please import from folder data
+database please import from folder data with database name acakkata.sql
 
 ## Run Program
 php -S localhost:8000 -t public
