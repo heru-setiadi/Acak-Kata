@@ -75,7 +75,7 @@
 
               				} 
                       else{
-                        alert('jawaban anda salah :( point anda berkurang 10 :(');
+                        alert('jawaban anda salah point anda berkurang 10 :(');
                         var point = $('#point').text();
 
                         if(point !== '0'){
@@ -88,7 +88,7 @@
                     }
                 });
               } else {
-                alert('mohon masukkan kata');
+                alert('Mohon masukkan jawaban anda');
               }
           });
 
