@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 use App\Model\Soal;
 class AcakKataController extends Controller
 {
-    public function index(){
-    
+    public function index() {
         $kata = $this->selectKata(0);
 
         if($kata['id'] == 'data tidak ada'){
