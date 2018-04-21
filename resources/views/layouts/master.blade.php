@@ -17,11 +17,11 @@
 		@yield('content')
 
 	<br>
-	<div class="footer">
+	<!-- <div class="footer">
 		<p>
 			&copy;Game Acak Kata 2018
 		</p>
-	</div>	
+	</div> -->	
 
 </body>
 </html>
