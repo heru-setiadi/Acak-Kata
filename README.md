@@ -10,3 +10,4 @@ database please import from folder 'data acakkata' with database name acakkata.s
 
 ## Run Program
 php -S localhost:8000 -t public
+Untuk menjalankannya http://localhost:8000/AcakKata
