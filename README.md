@@ -4,6 +4,9 @@ Permainan Acak Kata
 ## Installation
 composer install
 
+## Nama folder setelah download
+Beri Nama folder setelah download dari git link dengan nama folder 'AcakKata' 
+
 ## Database
 Tolong import database dari folder bernama 'data acakkata' dengan nama database acakkata.sql
 database please import from folder 'data acakkata' with database name acakkata.sql
