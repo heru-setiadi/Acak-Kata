@@ -10,7 +10,7 @@
 	<header>
 		<nav>
 			<a href="/">Home</a>
-			<a href="/AcakKata">Mulai Game</a>
+			<a href="/Acak-Kata">Mulai Game</a>
 		</nav>
 	</header>
 	<br>

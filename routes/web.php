@@ -4,12 +4,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/AcakKata', 'AcakKataController@index');
+Route::get('/Acak-Kata', 'AcakKataController@index');
 
 Route::post('/getJawaban', 'AcakKataController@getJawaban');
 Route::get('/selectKata', 'AcakKataController@selectKata');
 
-Route::get('/AcakKata/{id}', 'AcakKataController@show');
+Route::get('/Acak-Kata/{id}', 'AcakKataController@show');
 
 
 /*
